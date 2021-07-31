@@ -1,17 +1,20 @@
 import './App.css';
 import './styles/app.css';
 import React, { lazy, Suspense } from 'react';
-import Logo from './components/Logo';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-// const Home = lazy(() => import('./pages/Home'));
+const Homepage = lazy(() => import('./pages/Home'));
 
 function App() {
   return (
     <div className="">
-      <Home>
-        <Logo />
-      </Home>
+      <Router>
+        <Suspense fallback={<p>Loading...</p>}>
+          <Switch>
+            <Route path={'/'} component={Homepage} />
+          </Switch>
+        </Suspense>
+      </Router>
     </div>
   );
 }
