@@ -1,6 +1,6 @@
 const Body = () => {
     return (
-        <div className="flex justify-between align-center px-20 mt-10 pb-24">
+        <div className="flex-col md:flex-row flex justify-between align-center px-20 mt-10 pb-24">
             <div className="flex flex-col justify-center align-center">
                 <div className="text-gray-400 text-lg font-bold">AWARD WINNING DEV.</div>
                 <div className="text-5xl font-bold w-96 leading-tight pb-8 pt-2" >
